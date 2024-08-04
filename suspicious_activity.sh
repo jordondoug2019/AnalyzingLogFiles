@@ -13,6 +13,6 @@ suspicious_activity="/var/log/suspicious_activity.log"
 for each in "$logs" 
 do
     grep "Unauthorized" "$logs" >> "$suspicious_activity"
+    echo "Unauthorized activity logged on $(date)"
 done
 
-echo "$each  logged on $(date)"
